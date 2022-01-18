@@ -10,6 +10,9 @@
     --main: #0B0824;
     --texthover: #BBF55A;
     --text: #ffffff;
+    --boxcolor: #1B1832;
+    --sidecolor: #665FE0;
+    --litecolor: #6D6C7C;
 }
 
 
@@ -37,6 +40,78 @@ header {
     background-color: var(--main);
     display: flex;
     justify-content: space-between;
+}
+
+#main {
+    background-color: #ffffff00;
+    width: 100%;
+    position: relative;
+    max-height: 900px;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 3%;
+}
+
+#main img {
+    width: 100%;
+}
+
+.item-1 {
+    background-image: url(../img/COD-WZ.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.item-2 {
+    background-image: url(../img/league-of-legends.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.item-3 {
+    background-image: url(../img/overwatch-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    background: 0 0;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 30px;
+    outline: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    outline: none;
+}
+
+.owl-nav {
+    color: white;
+}
+
+.arrow {
+    width: 50%;
 }
 
 header .logo a {
@@ -113,6 +188,85 @@ header nav ul li:nth-child(6){
     cursor: pointer;
 }
 
+.main-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-section{
+    margin: 3% auto;
+}
+
+.side-section .league-name p{
+    color: var(--texthover);
+    padding: 5px 16px;
+    text-transform: capitalize;
+    font-size: 0.8em;
+}
+
+.side-section .league-name h3{
+    padding: 0 16px;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.timer{
+    background-color: var(--boxcolor);
+    margin: 10px 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-section hr{
+    width: 90%;
+    margin: 16px auto;
+    border-color: var(--litecolor);
+}
+
+.timer p{
+    color: var(--litecolor);
+    text-transform: capitalize;
+}
+
+.timer ul li{
+    list-style: none;
+    display: inline-block;
+    color: var(--sidecolor);
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    padding: 16px;
+}
+
+.info div{
+    margin: 0 16px;
+}
+
+.info .icon{
+    background-color: var(--boxcolor);
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.textinfo p{
+    margin: 5px auto;
+}
+
+.textinfo p:first-child{
+    color: var(--litecolor);
+    font-size: 0.8em;
+}
+
+.textinfo p:last-child{
+    color: var(--text);
+}
+
 
 /* mobile view */
 
@@ -175,6 +329,29 @@ header nav ul li:nth-child(6){
     .menu-icon .icon-list, .search {
         display: inline-block;
         padding: 5px 10px;
+    }
+    .item-1 {
+        background-image: url(../img/COD-WZ.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25vh;
+    }
+    
+    .item-2 {
+        background-image: url(../img/league-of-legends.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25vh;
+    }
+    
+    .item-3 {
+        background-image: url(../img/overwatch-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25vh;
     }
 }
 
@@ -243,5 +420,28 @@ header nav ul li:nth-child(6){
     .menu-icon .icon-list, .search {
         display: inline-block;
         padding: 5px 10px;
+    }
+    .item-1 {
+        background-image: url(../img/COD-WZ.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60vh;
+    }
+    
+    .item-2 {
+        background-image: url(../img/league-of-legends.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60vh;
+    }
+    
+    .item-3 {
+        background-image: url(../img/overwatch-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60vh;
     }
 }
