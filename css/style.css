@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --main: #0B0824;
+    --text: #020202;
+}
+
+
+body{
+    background-color: var(--main)
+}
+
+header {
+    position: relative;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    padding: 0 5em;
+    background-color: var(--main);
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo a {
+    font-weight: bold;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--text);
+    background-color: #895dc2;
+}
+
+header .search2 {
+    display: none;
+}
+
+.toggle {
+    line-height: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+.search {
+    display: none;
+}
+
+
+/* mobile view */
+
+@media all and (max-width:425px) {
+    header {
+        padding: 0 20px;
+    }
+    .toggle {
+        display: block;
+        color: white;
+        order: 1;
+    }
+    header .logo {
+        order: 2;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .search {
+        display: block;
+        order: 3;
+        height: 50px;
+        color: rgb(255, 255, 255);
+        line-height: 50px;
+        cursor: pointer;
+    }
+    .search a {
+        color: rgb(255, 255, 255);
+    }
+    header .search2 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: -50px;
+        left: 0;
+        padding: 1em 1em;
+    }
+    header .expand {
+        top: -100px;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 300px);
+        top: -700px;
+        left: 0;
+        background-color: #491a86;
+    }
+    header nav.active {
+        top: 50px;
+    }
+    header nav ul li a {
+        color: white;
+        border-bottom: 1px solid #ffffff;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* tab-view */
+
+@media all and (max-width:800px) {
+    header {
+        padding: 0 20px;
+        z-index: 999;
+    }
+    .toggle {
+        display: block;
+        color: white;
+        order: 1;
+    }
+    header .logo {
+        order: 2;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .search {
+        display: block;
+        order: 3;
+        height: 50px;
+        color: rgb(255, 255, 255);
+        line-height: 50px;
+        cursor: pointer;
+    }
+    .list-items {
+        order: 5;
+    }
+    .search a {
+        color: rgb(255, 255, 255);
+    }
+    header .search2 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: -50px;
+        left: 0;
+        padding: 1em 1em;
+    }
+    header .expand {
+        top: 50px;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 300px);
+        top: -700px;
+        left: 0;
+        background-color: #491a86;
+    }
+    header nav.active {
+        top: 50px;
+    }
+    header nav ul li a {
+        color: white;
+        border-bottom: 1px solid #ffffff;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
