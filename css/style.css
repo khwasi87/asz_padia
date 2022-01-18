@@ -239,12 +239,12 @@ header nav ul li:nth-child(6){
 .info{
     display: flex;
     align-items: center;
-    flex-flow: row;
+    flex-flow: row wrap;
     padding: 16px;
 }
 
 .info div{
-    margin: 0 16px;
+    margin: 0 14px;
 }
 
 .info .icon{
@@ -254,6 +254,24 @@ header nav ul li:nth-child(6){
     height: 50px;
     border-radius: 50%;
 }
+
+.info .btn1 button{
+    padding: 8px 16px;
+    background: transparent;
+    color: var(--litecolor);
+    border:1px solid var(--litecolor);
+    cursor: pointer;
+}
+
+.info .btn2 button{
+    padding: 8px 16px;
+    background-color: var(--texthover);
+    color: var(--main);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .textinfo p{
     margin: 5px auto;
 }
@@ -266,95 +284,6 @@ header nav ul li:nth-child(6){
 .textinfo p:last-child{
     color: var(--text);
 }
-
-
-/* mobile view */
-
-@media all and (max-width:425px) {
-    header {
-        padding: 0 10px;
-    }
-    .toggle {
-        display: block;
-        color: var(--text);
-        order: 1;
-    }
-    header .logo a {
-        order: 2;
-        margin: 0 auto;
-        padding: 5px 0;
-    }
-    header .search2 {
-        position: absolute;
-        display: block;
-        width: 100%;
-        top: -50px;
-        left: 0;
-        padding: 1em 1em;
-    }
-    header .expand {
-        top: -100px;
-    }
-    header nav {
-        position: absolute;
-        width: 100%;
-        height: calc(100vh - 300px);
-        top: -700px;
-        left: 0;
-        background-color: var(--main);
-    }
-    header nav.active {
-        top: 50px;
-    }
-    header nav ul li a {
-        color: var(--text);
-        border-bottom: 1px solid var(--text);
-    }
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    header nav ul li:last-child,
-    header nav ul li:nth-child(6){
-        display: block;
-    }
-    header .logo img:last-child{
-        padding: 16px;
-        display: none;
-    }
-    .user {
-        display: none;
-    }
-    .menu-icon .icon-list, .search {
-        display: inline-block;
-        padding: 5px 10px;
-    }
-    .item-1 {
-        background-image: url(../img/COD-WZ.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 25vh;
-    }
-    
-    .item-2 {
-        background-image: url(../img/league-of-legends.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 25vh;
-    }
-    
-    .item-3 {
-        background-image: url(../img/overwatch-2.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 25vh;
-    }
-}
-
 
 /* tab-view */
 
@@ -417,6 +346,12 @@ header nav ul li:nth-child(6){
     .user {
         display: none;
     }
+
+    .main-content{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
     .menu-icon .icon-list, .search {
         display: inline-block;
         padding: 5px 10px;
@@ -443,5 +378,108 @@ header nav ul li:nth-child(6){
         background-position: center;
         background-repeat: no-repeat;
         height: 60vh;
+    }
+
+    .side-info{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* mobile view */
+
+@media all and (max-width:425px) {
+    header {
+        padding: 0 10px;
+    }
+    .toggle {
+        display: block;
+        color: var(--text);
+        order: 1;
+    }
+    header .logo a {
+        order: 2;
+        margin: 0 auto;
+        padding: 5px 0;
+    }
+    header .search2 {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: -50px;
+        left: 0;
+        padding: 1em 1em;
+    }
+    header .expand {
+        top: -100px;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 300px);
+        top: -700px;
+        left: 0;
+        background-color: var(--main);
+    }
+    header nav.active {
+        top: 50px;
+    }
+    header nav ul li a {
+        color: var(--text);
+        border-bottom: 1px solid var(--text);
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li:last-child,
+    header nav ul li:nth-child(6){
+        display: block;
+    }
+    header .logo img:last-child{
+        padding: 16px;
+        display: none;
+    }
+    .user {
+        display: none;
+    }
+
+    .main-content{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .menu-icon .icon-list, .search {
+        display: inline-block;
+        padding: 5px 10px;
+    }
+    .item-1 {
+        background-image: url(../img/COD-WZ.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25vh;
+    }
+    
+    .item-2 {
+        background-image: url(../img/league-of-legends.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25vh;
+    }
+    
+    .item-3 {
+        background-image: url(../img/overwatch-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 25vh;
+    }
+
+    .side-info{
+        display: flex;
+        flex-direction: column;
     }
 }
