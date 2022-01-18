@@ -8,12 +8,23 @@
 
 :root{
     --main: #0B0824;
-    --text: #020202;
+    --texthover: #BBF55A;
+    --text: #ffffff;
 }
 
 
 body{
     background-color: var(--main)
+}
+
+.menu-right{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-icon .icon-list,.search,.user{
+    display: inline-block;
+    padding: 0 16px;
 }
 
 header {
@@ -22,23 +33,22 @@ header {
     z-index: 999;
     left: 0;
     right: 0;
-    padding: 0 5em;
+    padding: 0 2em;
     background-color: var(--main);
     display: flex;
     justify-content: space-between;
 }
 
 header .logo a {
-    font-weight: bold;
-    font-size: 24px;
-    height: 50px;
-    line-height: 50px;
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
     display: block;
+}
+
+header .logo img:last-child{
+    padding: 16px;
+    display: inline-block;
 }
 
 header nav ul {
@@ -56,18 +66,22 @@ header nav ul li a {
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
-    color: rgb(255, 255, 255);
+    color: var(--text);
     text-decoration: none;
     display: block;
     transition: 0.3s;
 }
 
 header nav ul li a:hover {
-    color: var(--text);
-    background-color: #895dc2;
+    color: var(--texthover);
 }
 
 header .search2 {
+    display: none;
+}
+
+header nav ul li:last-child,
+header nav ul li:nth-child(6){
     display: none;
 }
 
@@ -77,8 +91,26 @@ header .search2 {
     cursor: pointer;
 }
 
+.icon-list {
+    height: 50px;
+    color: var(--text);
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.user {
+    height: 50px;
+    color: var(--text);
+    line-height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
 .search {
-    display: none;
+    height: 50px;
+    color: var(--text);
+    line-height: 50px;
+    cursor: pointer;
 }
 
 
@@ -86,28 +118,17 @@ header .search2 {
 
 @media all and (max-width:425px) {
     header {
-        padding: 0 20px;
+        padding: 0 10px;
     }
     .toggle {
         display: block;
-        color: white;
+        color: var(--text);
         order: 1;
     }
-    header .logo {
+    header .logo a {
         order: 2;
         margin: 0 auto;
-        padding: 0;
-    }
-    .search {
-        display: block;
-        order: 3;
-        height: 50px;
-        color: rgb(255, 255, 255);
-        line-height: 50px;
-        cursor: pointer;
-    }
-    .search a {
-        color: rgb(255, 255, 255);
+        padding: 5px 0;
     }
     header .search2 {
         position: absolute;
@@ -126,52 +147,57 @@ header .search2 {
         height: calc(100vh - 300px);
         top: -700px;
         left: 0;
-        background-color: #491a86;
+        background-color: var(--main);
     }
     header nav.active {
         top: 50px;
     }
     header nav ul li a {
-        color: white;
-        border-bottom: 1px solid #ffffff;
+        color: var(--text);
+        border-bottom: 1px solid var(--text);
     }
     header nav ul {
         display: flex;
         flex-direction: column;
+    }
+
+    header nav ul li:last-child,
+    header nav ul li:nth-child(6){
+        display: block;
+    }
+    header .logo img:last-child{
+        padding: 16px;
+        display: none;
+    }
+    .user {
+        display: none;
+    }
+    .menu-icon .icon-list, .search {
+        display: inline-block;
+        padding: 5px 10px;
     }
 }
 
 
 /* tab-view */
 
-@media all and (max-width:800px) {
+@media all and (max-width:768px) {
     header {
-        padding: 0 20px;
+        padding: 0 10px;
         z-index: 999;
     }
     .toggle {
         display: block;
-        color: white;
+        color: var(--text);
         order: 1;
     }
-    header .logo {
+    header .logo a {
         order: 2;
         margin: 0 auto;
-        padding: 0;
-    }
-    .search {
-        display: block;
-        order: 3;
-        height: 50px;
-        color: rgb(255, 255, 255);
-        line-height: 50px;
-        cursor: pointer;
+        padding: 5px 0;
     }
     .list-items {
         order: 5;
-    }
-    .search a {
-        color: rgb(255, 255, 255);
     }
     header .search2 {
         position: absolute;
@@ -190,17 +216,32 @@ header .search2 {
         height: calc(100vh - 300px);
         top: -700px;
         left: 0;
-        background-color: #491a86;
+        background-color: var(--main);
     }
     header nav.active {
         top: 50px;
     }
     header nav ul li a {
-        color: white;
-        border-bottom: 1px solid #ffffff;
+        color: var(--text);
+        border-bottom: 1px solid var(--text);
     }
     header nav ul {
         display: flex;
         flex-direction: column;
+    }
+    header nav ul li:last-child,
+    header nav ul li:nth-child(6){
+    display: block;
+    }
+    header .logo img:last-child{
+        padding: 16px;
+        display: none;
+    }
+    .user {
+        display: none;
+    }
+    .menu-icon .icon-list, .search {
+        display: inline-block;
+        padding: 5px 10px;
     }
 }

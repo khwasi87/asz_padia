@@ -7,4 +7,4 @@ $(document).ready(function() {
     $('.search').click(function() {
         $('.search2').toggleClass('expand')
     })
-})
+}) 
