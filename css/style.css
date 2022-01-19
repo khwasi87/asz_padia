@@ -504,6 +504,19 @@ section{
     text-decoration: none;
 }
 
+.copyright ul li{
+    display: inline-block;
+    list-style: none;
+    color: var(--texthover);
+    font-size: 14px;
+}
+
+footer{
+    margin: 16px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
 /* tab-view */
 
 @media all and (max-width:768px) {
