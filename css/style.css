@@ -13,6 +13,8 @@
     --boxcolor: #1B1832;
     --sidecolor: #665FE0;
     --litecolor: #6D6C7C;
+    --borders:#38354C;
+    --searchback: #29263F;
 }
 
 
@@ -285,6 +287,223 @@ header nav ul li:nth-child(6){
     color: var(--text);
 }
 
+.slide-carousal{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.item{
+    background-color: var(--boxcolor);
+    border: 1px solid var(--litecolor);
+    padding: 16px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* section */
+section{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tourtitle{
+    width: 100%;
+    margin: 10px auto;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.alltour span a{
+    color: var(--sidecolor);
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+.boxset{
+    margin: 16px auto;
+    display: flex;
+    flex-direction: row;
+}
+.boximg img{
+    max-width: 200px;
+    width: 100%;
+}
+
+.box{
+    background: transparent;
+    border: 1px solid var(--borders);
+    border-radius: 8px;
+    padding: 4px;
+    margin: 8px;
+}
+
+.box hr{
+    border: 0.8px solid var(--borders);
+}
+
+.boxtext h4{
+    color: var(--text);
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 8px 0;
+}
+.infobox{
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    padding: 8px 0;
+}
+
+.infobox div{
+    margin: 0 10px;
+}
+
+.infobox .textbox{
+    color: var(--litecolor);
+    font-size: 0.8em;
+}
+
+.user-name{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.user-name img,p{
+    margin: 0 8px;
+    color: var(--text);
+    font-size: 0.7rem;
+    text-transform: capitalize;
+}
+
+.bottom-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-name img{
+    width: 16px;
+    padding: 8px 0;
+}
+
+.game img{
+    width: 42px;
+}
+
+/* Botton-section */
+
+.bottom-section{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.alltour{
+    width: 100%;
+    margin: 10px auto;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.alltour span a{
+    color: var(--sidecolor);
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+.toursearch{
+    width: 100%;
+    background-color: var(--searchback);
+    padding: 8px;
+    border: 1px solid var(--borders);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.toursearch input[type="text"]{
+    width: 50%;
+    padding: 14px;
+    margin: 0 8px;
+    color: var(--text);
+    background-color: var(--searchback);
+    border: none;
+}
+
+.toursearch input::placeholder{
+    color: var(--litecolor);
+    font-size: 18px;
+}
+
+.toursearch input[type="text"]:focus-visible{
+    outline: none;
+}
+
+.toursearch img{
+    margin: 0 8px;
+}
+
+/* bottom-list */
+
+.bottom-list{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-titles{
+    display: flex;
+    flex-direction: row;
+    padding: 16px 0;
+}
+
+.list-titles h4{
+    font-size: 18px;
+    color: var(--text);
+    margin: 0 16px;
+}
+
+.mainlist hr{
+    border: 0.8px solid var(--borders);
+}
+
+.sublist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.listimg img{
+    max-width: 50px;
+    width: 100%;
+}
+
+.middle-text p:first-child{
+    font-size: 14px;
+}
+.middle-text p:last-child{
+    color: var(--litecolor);
+}
+
+.end-text p{
+    color: var(--sidecolor);
+    text-transform: uppercase;
+}
+
+.end-text a{
+    text-decoration: none;
+}
+
 /* tab-view */
 
 @media all and (max-width:768px) {
@@ -384,6 +603,35 @@ header nav ul li:nth-child(6){
         display: flex;
         flex-direction: row;
     }
+
+}
+
+/* small screen */
+
+@media all and (max-width:1024px) {
+    section {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+    }
+
+    .bottom-section {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .bottom-list {
+        width: 100%;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bottom-list .mainlist{
+        margin: 16px 8px;
+    }
 }
 
 /* mobile view */
@@ -481,5 +729,39 @@ header nav ul li:nth-child(6){
     .side-info{
         display: flex;
         flex-direction: column;
+    }
+
+    .item {
+        background-color: var(--boxcolor);
+        border: 1px solid var(--litecolor);
+        padding: 16px;
+        margin: auto;
+        max-width: 200px;
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    .boxset{
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom-list{
+        width: 100%;
+        display: flex;
+        padding: 0 16px;
+        flex-direction: column;
+    }
+
+    .bottom-list .mainlist{
+        border: 1px solid var(--borders);
+        padding: 16px;
+        margin: 16px auto;
+    }
+
+    .bottom-section {
+        width: 100%;
+        padding: 0 16px;
     }
 }

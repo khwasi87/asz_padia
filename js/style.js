@@ -37,9 +37,9 @@ $('#bigowl').owlCarousel({
 var owl = $('#slider');
 owl.owlCarousel({
     loop:true,
+    margin:10,
     nav:false,
     dots:false,
-    margin:10,
     responsiveClass:true,
     responsive:{
         0:{
@@ -52,7 +52,7 @@ owl.owlCarousel({
             items:5
         },
         1200:{
-            items:6
+            items:7
         }
     }
 });
